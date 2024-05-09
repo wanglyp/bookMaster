@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+h2 {
+	margin: auto;
+	float: left;
+}
+
+a {
+	margin-left: 100px;
+}
+
+p {
+	margin: auto;
+}
+
+#bookId {
+	ime-mode: disabled;
+}
+
+#bookTitle {
+	width: 350px;
+}
+
+#authorName {
+	width: 350px;
+}
+
+#publisher {
+	width: 350px;
+}
+
+#year {
+	float: left;
+	width: 75px;
+	ime-mode: disabled;
+}
+
+.y {
+	float: left;
+}
+
+#month {
+	float: left;
+	width: 50px;
+	margin-left: 30px;
+	ime-mode: disabled;
+}
+
+.m {
+	float: left;
+}
+
+#day {
+	float: left;
+	width: 50px;
+	margin-left: 30px;
+	ime-mode: disabled;
+}
+
+#searchButton {
+	width: 60px;
+	margin-left: 70px;
+}
+
+#insertButton {
+	width: 60px;
+	margin-top: 10px;
+	float: left;
+	margin-top: 10px;
+}
+
+#updateButton {
+	width: 60px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+#deleteButton {
+	width: 60px;
+	margin-left: 20px;
+}
+
+#clearButton {
+	width: 60px;
+	margin-left: 20px;
+}
