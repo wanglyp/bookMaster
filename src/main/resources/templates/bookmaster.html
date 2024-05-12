@@ -6,6 +6,36 @@
   <link th:href="@{/css/bookmaster.css}" rel="stylesheet" type="text/css">
   </head>
   <body>
-	  <h2>本マスタメンテ</h2>	   
+	  <h2>本マスタメンテ</h2>	  
+	  <a href="#" id="closeLink">閉じる</a>	  
+	  <br>
+	  <br>
+	  <form id="bookMasterForm" method="POST">
+		  <p class="p1">本ID：</p>
+		  <input type="text" maxlength="4" name="bookId" id="bookId"/>
+		  <button id="searchButton">検索</button>	
+		  <p>本タイトル：</p>
+		  <input type="text" maxlength="40" name="bookTitle" id="bookTitle"/>		  
+		  <p>著者名：</p>
+		  <input type="text" maxlength="40" name="authorName" id="authorName"/>		  
+		  <p>出版社：</p>
+		  <input type="text" maxlength="40" name="publisher" id="publisher"/>
+		  <p> 出版年月日：</p>		  
+		  <input type="text" maxlength="4" name="year" id="year"/>
+		  <p class="y">年</p> 
+		  <input type="text" maxlength="2" name="month" id="month"/> 
+		  <p class="m">月</p> 
+		  <input type="text" maxlength="2" name="day" id="day"/> 
+		  <p class="d">日</p>
+		  <br>			  	  
+		  <button id="insertButton">追加</button>
+		  <button id="updateButton">更新</button>
+		  <button id="deleteButton">削除</button>	
+		  <button id="clearButton" type="button">クリア</button>		 	  
+	  </form>	   
+	  <!-- modelオブジェクトに設定したmessageの値を取得しhidden項目に設定 -->
+	  <input type="hidden" id="message" th:value="${message}" />
+	  <script th:src="@{/js/bookmaster.js}"></script>
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	  
   </body>
 </html>

@@ -89,6 +89,12 @@ function checkPublisher() {
 function checkYear() {
 	const year = document.getElementById("year").value;
 
+	if (year.length != 4){
+		alert("年を半角数字4桁で入力してください!");
+
+		return false;
+	}
+
 	//空白文字チェック
 	if (!regex.regex1.test(year)) {
 		alert(msg.MSG0009);
@@ -109,6 +115,12 @@ function checkYear() {
 function checkMonth() {
 	const month = document.getElementById("month").value;
 
+	if (month.length != 2){
+		alert("月を半角数字2桁で入力してください!");
+
+		return false;
+	}
+	
 	//空白文字チェック
 	if (!regex.regex1.test(month)) {
 		alert(msg.MSG0009);
@@ -128,6 +140,12 @@ function checkMonth() {
 //出版日チェック
 function checkDay() {
 	const day = document.getElementById("day").value;
+
+	if (day.length != 2){
+		alert("日を半角数字2桁で入力してください!");
+
+		return false;
+	}
 
 	//空白文字チェック
 	if (!regex.regex1.test(day)) {
@@ -154,7 +172,7 @@ searchButton().onclick = function() {
 	//入力チェック
 	if (checkBookId()) {
 		//サーバーへ伝送する
-		document.getElementById("bookForm").action = "/searchBook";
+		document.getElementById("bookMasterForm").action = "/searchBook";
 	} else {
 		return false;
 	}
@@ -190,7 +208,7 @@ insertButton().onclick = function() {
 	}
 
 	//サーバーへ伝送する
-	document.getElementById("bookForm").action = "/insertBook";
+	document.getElementById("bookMasterForm").action = "/insertBook";
 }
 
 //更新押下の処理
@@ -223,7 +241,7 @@ updateButton().onclick = function() {
 	}
 
 	//サーバーへ伝送する
-	document.getElementById("bookForm").action = "/updateBook";
+	document.getElementById("bookMasterForm").action = "/updateBook";
 }
 
 //削除を押下の処理
@@ -235,7 +253,7 @@ deleteButton().onclick = function() {
 	//入力チェック
 	if (checkBookId()) {
 		//サーバーへ伝送する
-		document.getElementById("bookForm").action = "/deleteBook";
+		document.getElementById("bookMasterForm").action = "/deleteBook";
 	} else {
 		return false;
 	}
