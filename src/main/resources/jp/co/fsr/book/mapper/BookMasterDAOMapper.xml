@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 本情報挿入Mapper -->
-<mapper namespace="jp.co.fsr.book.dao.BookMasterDAO">	
+<mapper namespace="jp.co.fsr.book.dao.BookMasterDAO">
 	<insert id="insert">
 		insert into mt_book
 		values(#{bookId},
-		       #{bookTitle},
-		       #{authorName},
-		       #{publisher},
-		       #{publicationDay},
-		       NOW(),
-		       NOW())
+		#{bookTitle},
+		#{authorName},
+		#{publisher},
+		#{publicationDay},
+		NOW(),
+		NOW())
 	</insert>
-	
+
 </mapper>

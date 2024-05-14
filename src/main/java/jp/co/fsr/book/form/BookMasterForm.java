@@ -2,11 +2,12 @@ package jp.co.fsr.book.form;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
+
 import jp.co.fsr.book.util.DateUtil;
-import jp.co.fsr.book.entity.BookEntity;
 import lombok.Data;
 
 /**
